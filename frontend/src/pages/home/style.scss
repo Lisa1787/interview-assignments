@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+  position: relative;
+
+  // Slide item
+  .item {
+    position: relative;
+    height: 100vh;
+
+    // Top area
+    .top {
+      margin-top: 183px;
+      .title {
+        display: inline-block;
+        max-width: 900px;
+        padding: 16px 0;
+        font-size: 56px;
+        font-weight: 600;
+        line-height: 68px;
+      }
+
+      .text {
+        margin: 0 auto;
+        display: block;
+        max-width: 450px;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 34px;
+      }
+    }
+
+    // Bottom area
+    .bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 152px;
+      .img-box {
+        display: flex;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &.item_1 {
+      color: #fff;
+      background: #101010;
+    }
+
+    &.item_2 {
+      color: #000;
+      background: #fafafa;
+    }
+
+    &.item_3 {
+      color: #000;
+      background: #f2f2f4;
+    }
+  }
+
+  // Antd component style to change
+  .ant-carousel {
+    .slick-dots li {
+      width: 40px;
+      height: 2px;
+      background: #a9a9a9;
+
+      button {
+        height: 2px;
+        background: #a9a9a9;
+        opacity: 1;
+      }
+
+      &.slick-active {
+        width: 40px;
+
+        button {
+          background: #fafafa;
+          animation: width 3s linear;
+        }
+      }
+    }
+
+    .slick-dots-bottom {
+      bottom: 50px;
+    }
+  }
+}
+
+@keyframes width {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
